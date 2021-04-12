@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'mysite/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'mysite/css/responsive.css' %}">
+
+</head>
+
+<body>    
+<div class="wrapper">
+    <header>
+        <div class="top-container">
+            <i class="fas fa-chair fa-3x fa-fw"></i>
+            <form class="form" method="GET">
+                <input class="form-text" type="search" placeholder="商品検索">
+            </form>
+            <div class="user">
+                <i class="far fa-meh-blank fa-3x fa-fw"></i>
+                <div class="username">こんにちは{{ user.get_username }}さん</div>
+            </div>
+            <i class="fas fa-align-justify fa-2x fa-fw"></i>
+        </div>
+    </header>
+</div>
+
+{% block content %}{% endblock content %}
+
+<div class="wrapper">
+    <footer>
+        <div class="bottom-container">
+            <p>生活に変わらない安心と派手すぎない贅沢を
+                <br>国内製品に注目した家具と雑貨</p>
+            <ul class="information">
+                <li><a class="bottom-link" href="#">My Page</a></li>
+                <li><a class="bottom-link" href="#">お問い合わせ</a></li>
+                <li><a class="bottom-link" href="#">事業者の方</a></li>
+                <li><a class="bottom-link" href="#">ご注文、ご返却について</a></li>
+                <li><a class="bottom-link" href="#">配送等について</a></li>
+                <li>{% if user.is_authenticated %}
+                    <a class="bottom-link"
+                    href="{% url 'account_logout' %}">ログアウトする</a>
+                    {% else %}
+                    <a class="bottom-link"
+                    href="{% url 'account_login' %}">ログインする</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

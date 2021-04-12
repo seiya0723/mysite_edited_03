@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.wrapper {
+  width: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background-color: honeydew;
+}
+
+/* header */
+header {
+  background-color: greenyellow;
+  height: 7rem;
+}
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+}
+.username {
+  font-size: 0.6rem;
+}
+
+.fa-chair {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  color: white;
+}
+.form {
+  padding: auto;
+  padding-top: 2.5rem;
+}
+.form-text {
+  font-size: medium;
+  width: 30rem;
+}
+
+.fa-meh-blank {
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+.fa-align-justify {
+  display: none;
+}
+
+/* body */
+.news {
+  margin-top: 0.5rem;
+}
+.contents-container {
+  display: flex;
+  flex-direction: row;
+}
+.contents-container ul {
+  padding: 0;
+}
+.photo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+}
+.stand {
+  display: block;
+  height: 5rem;
+}
+.hide {
+  display: block;
+  height: 5rem;
+}
+.value {
+  margin: 0.5rem 1rem;
+  background-color: aqua;
+}
+.leftmenu {
+  width: 30%;
+  margin-left: 1rem;
+}
+.contents {
+  width: 70%;
+  margin: 0 1rem 0 3rem;
+}
+
+/* footer */
+footer {
+  background-color: greenyellow;
+  height: 8rem;
+}
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.information {
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
+footer p {
+  font-size: 1.3em;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color: green;
+}

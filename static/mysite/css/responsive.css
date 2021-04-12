@@ -1,0 +1,114 @@
+@media (max-width: 800px) {
+  html {
+    font-size: 15px;
+  }
+  /* header */
+  header {
+    background-color: greenyellow;
+  }
+  .top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .fa-chair {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    color: white;
+    font-size: 2rem;
+  }
+  .form {
+    padding: auto;
+    padding-top: 2.5rem;
+  }
+  .form-text {
+    font-size: medium;
+    width: 10rem;
+  }
+
+  .fa-meh-blank {
+    margin-right: 1rem;
+    margin-top: 2rem;
+    display: none;
+  }
+  .username {
+    display: none;
+  }
+  .fa-align-justify {
+    color: black;
+    display: block;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  /* body */
+  .contents-container ul {
+    padding: 0;
+  }
+  .photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .value {
+    margin: 0.5rem 0;
+    background-color: aqua;
+  }
+  .leftmenu {
+    display: none;
+  }
+
+  .contents {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .hide {
+    display: none;
+  }
+  .news-list {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .newscontent {
+    text-align: center;
+  }
+  .news {
+    margin-top: 0.5rem;
+  }
+
+  .content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* footer */
+  footer {
+    background-color: greenyellow;
+  }
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .information {
+    font-size: 0.6rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 0.5rem;
+    padding: 0;
+  }
+  .bottom-link {
+    flex-basis: auto;
+  }
+  footer p {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: green;
+  }
+}

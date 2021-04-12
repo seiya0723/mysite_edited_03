@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>カートの中身</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+
+{% for cart in carts %}
+<div class="border p-2">
+    <div>商品名:{{ cart.product.name }}</div>
+    <div>単価:{{ cart.product.price }}</div>
+    <div>数量:{{ cart.amount }}</div>
+    <!--TODO:ここはカスタムテンプレートタグにて-->
+    <div>合計:</div>
+</div>
+
+{% endfor %}
+
+<div>合計:{{ data_amount }}円</div>
+
+
+<form action="{% url 'mysite:checkout' %}" method="POST">
+    <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{ data_key }}"
+        data-amount="{{ data_amount }}"
+        data-name="{{ data_name }}"
+        data-currency="{{ data_currency }}"
+        data-description="{{ data_description }}"
+        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+        data-locale="auto">
+    </script>
+    {% csrf_token %}
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+{% extends 'mysite/base.html' %}
+
+{% block title %}TOP PAGE{% endblock title %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="contents-container">
+            <div class="leftmenu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">商品一覧</a></li>
+                    <li><a href="#">ブランド紹介</a></li>
+                    <li><a href="#">イベント情報</a></li>
+                    <li><a href="#">店舗のご案内</a></li>
+                    <li><a href="#">スタッフ紹介</a></li>
+                    <li><a href="#">会社概要</a></li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="news-list">
+                    <h4>information</h4>
+                    <ul class="newscontent">
+                        <li class="news"><a href="#">お知らせ1お知らせ1お知らせ1お知らせ1お知らせ1</a></li>
+                        <li class="news"><a href="#">お知らせ2</a></li>
+                        <li class="news"><a href="#">お知らせ3</a></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <h4>スタッフおすすめ商品</h4>
+                    <ul class="photo recommend">
+                        <li><a class="stand" href="#"><img class="value" src="#" alt="商品1"></a></li>
+                        <li><a class="stand" href="#"><img class="value" src="#" alt="商品2"></a></li>
+                        <li><a class="stand" href="#"><img class="value" src="#" alt="商品3"></a></li>
+                        <li><a class="hide" href="#"><img class="value" src="#" alt="商品4"></a></li>
+                        <li><a class="hide" href="#"><img class="value" src="#" alt="商品5"></a></li>
+                        <li><a class="hide" href="#"><img class="value" src="#" alt="商品6"></a></li>
+                    </ul>
+                    <h4>人気商品</h4>
+                    <ul class="photo popular">
+                        <li><a class="stand" href="#"><img class="value" src="#" alt="商品a"></a></li>
+                        <li><a class="stand" href="#"><img class="value" src="#" alt="商品b"></a></li>
+                        <li><a class="stand" href="#"><img class="value" src="#" alt="商品c"></a></li>
+                        <li><a class="hide" href="#"><img class="value" src="#" alt="商品d"></a></li>
+                        <li><a class="hide" href="#"><img class="value" src="#" alt="商品e"></a></li>
+                        <li><a class="hide" href="#"><img class="value" src="#" alt="商品f"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

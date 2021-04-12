@@ -1,0 +1,8 @@
+{% extends "account/email/base_message.txt" %}
+{% load account %}
+{% load i18n %}
+
+{% block content %}{% autoescape off %}{% user_display user as user_display %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}本メールはmysiteへの登録を確認するものです。
+
+メールアドレスを確認するため下記URLにアクセスしてください。
+{{ activate_url }}{% endblocktrans %}{% endautoescape %}{% endblock %}
