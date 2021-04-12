@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
-from .models import Cart
+from .models import Cart,History
 from .forms import HistoryForm
 
 from django.conf import settings
@@ -98,6 +98,14 @@ class CheckoutView(LoginRequiredMixin,View):
             #カート内の商品を購入履歴に記録。
             #TIPS:外部キーで関連付けられた主キーを記録する場合、forms.pyもしくはserializer.pyを経由してバリデーションしなければ、DBに記録できない
             for cart in carts:
+
+                """
+                data    = History(  product = cart.product.id,
+                                    amount = cart.amount ,
+                                    user = cart.user.id ,
+                                    )
+                data.save()
+                """
                 data    = { "product" : cart.product.id ,
                             "amount" : cart.amount ,
                             "user" : cart.user.id ,
